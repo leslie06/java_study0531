@@ -1,6 +1,8 @@
-package com.cn.tacocloud2021;
+package com.cn.tacocloud2021.controller;
 
-import com.cn.tacocloud2021.Ingredient.Type;
+import com.cn.tacocloud2021.entity.Ingredient;
+import com.cn.tacocloud2021.entity.Ingredient.Type;
+import com.cn.tacocloud2021.entity.Taco;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

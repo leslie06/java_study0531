@@ -1,4 +1,4 @@
-package com.cn.tacocloud2021;
+package com.cn.tacocloud2021.entity;
 
 import lombok.Data;
 
