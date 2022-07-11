@@ -1,7 +1,7 @@
 package designpattern.singleton;
 
 /**
- * @Description 饿汉式
+ * @Description 饿汉式 线程安全
  * @Author leslie
  * @Date 2022/6/19 18:46
  **/
