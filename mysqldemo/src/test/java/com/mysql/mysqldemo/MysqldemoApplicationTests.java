@@ -71,7 +71,7 @@ class MysqldemoApplicationTests {
     @Test
     void register(){
         User user = new User();
-        user.setName("康昱");
+        user.setName("leslie");
         user.setPassword("88888888");
         userService.register(user);
         System.out.println(userService.register(user));
@@ -79,8 +79,8 @@ class MysqldemoApplicationTests {
     @Test
     void login(){
         User user = new User();
-        user.setName("康昱");
-        user.setPassword("888888889");
+        user.setName("leslie");
+        user.setPassword("888888888");
         userService.login(user);
         System.out.println(userService.login(user));
     }
