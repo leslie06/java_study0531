@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <script src="webjars/jquery/3.5.0/jquery.min.js"></script>
+</head>
+<body>
+    <form onsubmit="login()">
+        <input type="text" id="user_name" placeholder="用户名" required />
+        <br>
+        <input type="password" id="password" placeholder="密码" minlength="8" required />
+        <br>
+        <button type="submit">登录</button>
+        <a href="register.html">注册</a>
+    </form>
+<script>
+    function login() {
+        $.ajax({
+            url: "/user/login",
+            async: true,
+            type: "post",
+            data: {name:$("#user_name").val(),password:$("#password").val()},
+            dataType: "json",
+            success: function(result){//请求成功的回调函数
+                if(result){
+                    alert("登录成功！");
+                }else{
+                    alert("登录失败！");
+                }
+            },
+            error: function (xhr,type,exception) {
+                alert(xhr.responseText,"请求发生错误");
+            }
+
+        });
+    }
+</script>
+</body>
+</html>

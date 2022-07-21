@@ -2,8 +2,10 @@ package com.mysql.mysqldemo;
 
 import com.mysql.mysqldemo.entity.People;
 import com.mysql.mysqldemo.entity.Person;
+import com.mysql.mysqldemo.entity.User;
 import com.mysql.mysqldemo.mysql.JpaPersonRepository;
 import com.mysql.mysqldemo.mysql.PersonRepository;
+import com.mysql.mysqldemo.service.UserService;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +20,8 @@ class MysqldemoApplicationTests {
     private PersonRepository personRepository;
     @Autowired
     private JpaPersonRepository jpaPersonRepository;
+    @Autowired
+    private UserService userService;
 
     @Test
     void contextLoads() {
@@ -63,6 +67,22 @@ class MysqldemoApplicationTests {
     void findAll(){
         List<People> list = jpaPersonRepository.findAll();
         System.out.println(list);
+    }
+    @Test
+    void register(){
+        User user = new User();
+        user.setName("康昱");
+        user.setPassword("88888888");
+        userService.register(user);
+        System.out.println(userService.register(user));
+    }
+    @Test
+    void login(){
+        User user = new User();
+        user.setName("康昱");
+        user.setPassword("888888889");
+        userService.login(user);
+        System.out.println(userService.login(user));
     }
 
 

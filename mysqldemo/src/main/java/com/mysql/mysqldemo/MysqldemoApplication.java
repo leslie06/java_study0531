@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 
 @SpringBootApplication
-@ServletComponentScan("com.mysql.mysqldemo.spring.filter")
+//@ServletComponentScan("com.mysql.mysqldemo.spring.filter")
 public class MysqldemoApplication {
 
     public static void main(String[] args) {
