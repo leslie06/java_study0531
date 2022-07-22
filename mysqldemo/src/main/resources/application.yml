@@ -4,3 +4,6 @@ spring:
     driverClassName: com.mysql.cj.jdbc.Driver
     username: root
     password: root
+  redis:
+    host: 127.0.0.1
+    port: 6379
