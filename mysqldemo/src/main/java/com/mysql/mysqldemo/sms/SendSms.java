@@ -65,8 +65,8 @@ public class SendSms {
 
         // Parameter settings for API request
         SendSmsRequest sendSmsRequest = SendSmsRequest.builder()
-                .signName("阿里云短信测试")
-                .templateCode("SMS_154950909")
+                .signName("康昱个人网站")
+                .templateCode("SMS_268535655")
                 .phoneNumbers("18240898870")
                 .templateParam("{\"code\":\"9527\"}")
                 // Request-level configuration rewrite, can set Http request parameters, etc.
